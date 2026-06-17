@@ -5,6 +5,23 @@
  * crear un html y mandar a llamar a llamar ese java (cualquier cosa)
  * @author bluebul
  */
+
+
+/**\
+ * Siguiendo al ing
+ */
+let nombre =  "Fernando";
+if(nombre === "Cristian"){
+  console.log("Hola Fernando");
+}else if (nombre ==="Fernando"){
+  console.log("Hola, Cristian")
+}else {
+  console.log("no se encontro tu nombre")
+}
+
+/**
+ * MI parte de mi investigación:
+ */
 let valor = true;
 let condición1 = true;
 let condición2 = true;
