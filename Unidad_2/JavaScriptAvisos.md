@@ -1,0 +1,1 @@
+Deber: Como se crea una clase en JavaScript, y un poco de POO
