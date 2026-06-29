@@ -1,0 +1,91 @@
+================================================================================
+REPORTE DE RENDIMIENTO - SISTEMA DE GESTIÓN BIBLIOTECARIA
+================================================================================
+Fecha: 28/6/2026.
+Método de medición: process.hrtime.bigint() (nanosegundos)
+================================================================================
+
+RESULTADOS DE ORDENAMIENTO (MergeSort)
+--------------------------------------------------------------------------------
+
+Dataset: pequeno
+  Tamaño: 1000 libros
+  Iteraciones: 5
+  Tiempo promedio: 1.06 ms
+  Tiempo mínimo: 405.89 µs
+  Tiempo máximo: 2.24 ms
+  Tiempos individuales:
+    Iteración 1: 2.24 ms
+    Iteración 2: 1.49 ms
+    Iteración 3: 729.88 µs
+    Iteración 4: 428.21 µs
+    Iteración 5: 405.89 µs
+
+Dataset: mediano
+  Tamaño: 25.000 libros
+  Iteraciones: 5
+  Tiempo promedio: 22.79 ms
+  Tiempo mínimo: 20.86 ms
+  Tiempo máximo: 27.42 ms
+  Tiempos individuales:
+    Iteración 1: 27.42 ms
+    Iteración 2: 23.31 ms
+    Iteración 3: 21.38 ms
+    Iteración 4: 20.99 ms
+    Iteración 5: 20.86 ms
+
+Dataset: grande
+  Tamaño: 500.000 libros
+  Iteraciones: 5
+  Tiempo promedio: 515.60 ms
+  Tiempo mínimo: 496.72 ms
+  Tiempo máximo: 538.56 ms
+  Tiempos individuales:
+    Iteración 1: 538.56 ms
+    Iteración 2: 529.44 ms
+    Iteración 3: 501.55 ms
+    Iteración 4: 511.75 ms
+    Iteración 5: 496.72 ms
+
+
+RESULTADOS DE BÚSQUEDA (Búsqueda Binaria)
+--------------------------------------------------------------------------------
+
+Dataset: pequeno
+  Tamaño: 1000 libros
+  Iteraciones: 5
+  Tiempo promedio: 40.18 µs
+  Tiempo mínimo: 3.70 µs
+  Tiempo máximo: 95.29 µs
+  Tiempos individuales:
+    Iteración 1: 95.29 µs
+    Iteración 2: 89.79 µs
+    Iteración 3: 7.98 µs
+    Iteración 4: 3.70 µs
+    Iteración 5: 4.15 µs
+
+Dataset: mediano
+  Tamaño: 25.000 libros
+  Iteraciones: 5
+  Tiempo promedio: 5.75 µs
+  Tiempo mínimo: 2.86 µs
+  Tiempo máximo: 15.55 µs
+  Tiempos individuales:
+    Iteración 1: 15.55 µs
+    Iteración 2: 3.19 µs
+    Iteración 3: 3.69 µs
+    Iteración 4: 3.48 µs
+    Iteración 5: 2.86 µs
+
+Dataset: grande
+  Tamaño: 500.000 libros
+  Iteraciones: 5
+  Tiempo promedio: 4.75 µs
+  Tiempo mínimo: 2.56 µs
+  Tiempo máximo: 12.46 µs
+  Tiempos individuales:
+    Iteración 1: 12.46 µs
+    Iteración 2: 3.33 µs
+    Iteración 3: 2.77 µs
+    Iteración 4: 2.65 µs
+    Iteración 5: 2.56 µs
