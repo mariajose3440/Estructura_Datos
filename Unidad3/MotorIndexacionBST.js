@@ -45,9 +45,28 @@ class MotorIndexacionBST {
     }
 
     insertarNodo(nodoActual, nuevoNodo) {
-        // TAREA DEL ESTUDIANTE: Implementar comparación
-        alfabética(localeCompare);
-        // Si el 'keyword' ya existe, incremente el contador
-        //'visitas' en 1.
+        const comparacion = nuevoNodo.keyword.localeCompare(nodoActual.keyword);
+        
+        if (comparacion === 0) {
+            // La palabra clave ya existe: solo incrementamos el contador de visitas
+            nodoActual.visitas += 1;
+            return nodoActual;
+        } else if (comparacion < 0) {
+            // nuevoNodo va alfabéticamente antes -> subárbol izquierdo
+            if (nodoActual.izquierda === null) {
+                nodoActual.izquierda = nuevoNodo;
+            } else {
+                this.insertarNodo(nodoActual.izquierda, nuevoNodo);
+            }
+        } else {
+            // nuevoNodo va alfabéticamente después -> subárbol derecho
+            if (nodoActual.derecha === null) {
+                nodoActual.derecha = nuevoNodo;
+            } else {
+                this.insertarNodo(nodoActual.derecha, nuevoNodo);
+            }
+        }
+
+        return nodoActual;
     }
 }
