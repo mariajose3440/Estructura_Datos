@@ -57,3 +57,4 @@ out/
 # ==========================
 .cache/
 .eslintcache
+*.json
