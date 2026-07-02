@@ -69,4 +69,40 @@ class MotorIndexacionBST {
 
         return nodoActual;
     }
+
+    buscar(keyword) {
+        // TAREA DEL ESTUDIANTE: Implementar lógica iterativa o recursiva.
+        let actual = this.raiz;
+
+        while (actual !== null) {
+            const comparacion = keyword.localeCompare(actual.keyword);
+
+            if (comparacion === 0) {
+                return actual; // encontrado (nodo completo: keyword, urlCache, visitas)
+            } else if (comparacion < 0) {
+                actual = actual.izquierdo;
+            } else {
+                actual = actual.derecho;
+            }
+        }
+
+        return null; // no encontrado
+    }
+
+    exportarHistorial(nodo = this.raiz, resultado = []) {
+        // TAREA DEL ESTUDIANTE: Implementar recorrido Inorden.
+        if (nodo === null) {
+            return resultado;
+        }
+
+        this.exportarHistorial(nodo.izquierdo, resultado);
+        resultado.push({
+            keyword: nodo.keyword,
+            urlCache: nodo.urlCache,
+            visitas: nodo.visitas
+        });
+        this.exportarHistorial(nodo.derecho, resultado);
+
+        return resultado;
+    }
 }
